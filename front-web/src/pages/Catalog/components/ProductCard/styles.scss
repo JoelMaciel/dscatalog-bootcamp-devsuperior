@@ -1,0 +1,38 @@
+.product-card {
+    width: 180px;
+    padding: 8px 18px 10px 10px;
+    text-align: center;
+}
+
+.product-info {
+    border-top: 1px solid #E1E1E1;
+    text-align: left;
+    padding-top: 5px;
+    margin-top: 6px;
+} 
+
+.product-name {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.015em;
+}
+
+.product-price-container {
+    margin-top: 10px;
+    display: flex;
+}
+
+.product-price {
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.015em;
+    color: #407BFF;
+    margin-left: 7px;
+}
+
+.product-currency {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;
+}
