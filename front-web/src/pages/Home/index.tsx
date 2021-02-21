@@ -4,7 +4,7 @@ import Buttonicon from '../../core/components/Buttonicon';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
-const home = () => (
+const Home = () => (
     <div className="home-container">
         <div className="row home-content card-base border-radius-20">
          <div className="col-6 ">
@@ -14,7 +14,7 @@ const home = () => (
             <p className="text-subtitle">
                 Ajudaremos você a encontrar os melhores <br/> produtos disponíveis no mercado
             </p>
-            <Link to="/catalog">
+            <Link to="/products">
               <Buttonicon text="inicie agora a sua busca" />
             </Link>
         </div>
@@ -25,4 +25,4 @@ const home = () => (
     </div>
 );
 
-export default home;
+export default Home;
