@@ -10,10 +10,11 @@ import Pagination from 'core/components/Pagination';
 const Catalog = () => {
     const [productsResponse, setProductsResponse] = useState<ProductsResponse>();
     const [isLoading, setIsLoading] = useState(false);
+    const [activePage, setActivePage] = useState(0);
 
     useEffect(() => {
         const params = {
-            page: 0,
+            page: activePage,
             linesPerPage: 12
         }
         setIsLoading(true);
@@ -23,8 +24,7 @@ const Catalog = () => {
                 setIsLoading(false);
             })
 
-    }, []);
-
+    }, [activePage]);
 
     return (
      <div className="catalog-container">
@@ -40,7 +40,13 @@ const Catalog = () => {
                     ))
                 )}
             </div>
-            <Pagination />
+            {productsResponse && (
+             <Pagination
+              totalPages={productsResponse.totalPages} 
+              activePage={activePage}
+              onChange={page =>setActivePage(page)}
+              />
+             )}
     </div>
     )
 };
